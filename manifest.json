@@ -1,0 +1,28 @@
+{
+  "name": "Jira Toolkit",
+  "description": "Extension to add useful views and boosts to Jira",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    { 
+      "matches": ["https://*.atlassian.net/jira/software/c/projects/*/boards/*/reports/velocity-chart"],
+      "css": ["reports/velocity_chart/style.css"],
+      "js": ["reports/velocity_chart/script.js"]
+    }
+  ],
+  "permissions": ["scripting"],
+  "action": {
+    "default_icon": {
+      "16": "/images/toolbox-repairing-icon.png",
+      "32": "/images/toolbox-repairing-icon.png",
+      "48": "/images/toolbox-repairing-icon.png",
+      "128": "/images/toolbox-repairing-icon.png"
+    }
+  },
+  "icons": {
+    "16": "/images/toolbox-repairing-icon.png",
+    "32": "/images/toolbox-repairing-icon.png",
+    "48": "/images/toolbox-repairing-icon.png",
+    "128": "/images/toolbox-repairing-icon.png"
+  }
+}
