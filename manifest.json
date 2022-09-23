@@ -4,13 +4,21 @@
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [
-    { 
-      "matches": ["https://*.atlassian.net/jira/software/c/projects/*/boards/*/reports/velocity-chart"],
-      "css": ["reports/velocity_chart/style.css"],
-      "js": ["reports/velocity_chart/script.js"]
+    {
+      "matches": [
+        "https://*.atlassian.net/jira/software/c/projects/*/boards/*/reports/velocity-chart"
+      ],
+      "css": [
+        "reports/velocity_chart/averagepoints.css"
+      ],
+      "js": [
+        "reports/velocity_chart/averagePoints.js"
+      ]
     }
   ],
-  "permissions": ["scripting"],
+  "permissions": [
+    "scripting"
+  ],
   "action": {
     "default_icon": {
       "16": "/images/toolbox-repairing-icon.png",
