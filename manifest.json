@@ -32,16 +32,16 @@
   ],
   "action": {
     "default_icon": {
-      "16": "/shared/images/toolbox-repairing-icon.png",
-      "32": "/shared/images/toolbox-repairing-icon.png",
-      "48": "/shared/images/toolbox-repairing-icon.png",
-      "128": "/shared/images/toolbox-repairing-icon.png"
+      "16": "/shared/images/toolbox16.png",
+      "32": "/shared/images/toolbox32.png",
+      "48": "/shared/images/toolbox48.png",
+      "128": "/shared/images/toolbox128.png"
     }
   },
   "icons": {
-    "16": "/shared/images/toolbox-repairing-icon.png",
-    "32": "/shared/images/toolbox-repairing-icon.png",
-    "48": "/shared/images/toolbox-repairing-icon.png",
-    "128": "/shared/images/toolbox-repairing-icon.png"
+    "16": "/shared/images/toolbox16.png",
+    "32": "/shared/images/toolbox32.png",
+    "48": "/shared/images/toolbox48.png",
+    "128": "/shared/images/toolbox128.png"
   }
 }
