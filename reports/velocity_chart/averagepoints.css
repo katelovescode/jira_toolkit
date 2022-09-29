@@ -1,4 +1,10 @@
-#average-points {
-  margin: 0;
-  text-align: left;
+#average-points-header {
+  font-size: 1.5rem;
+  color: #F05022;
+  font-family: Nunito;
+  font-weight: 800;
+}
+
+#average-points-committed, #average-points-completed {
+  font-size: 1.1rem;
 }

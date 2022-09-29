@@ -17,17 +17,53 @@ const waitForChartData = (mutations) => {
 };
 
 const createAveragePointsDiv = () => {
-  const average_points_div = document.createElement("div");
-  average_points_div.setAttribute("id", "average-points");
-  average_points_div.innerHTML = averagePoints();
+  const averagePointsDiv = document.createElement("div");
+  averagePointsDiv.setAttribute("id", "average-points");
+
+  const averagePointsHeaderDiv = document.createElement("div");
+  averagePointsHeaderDiv.setAttribute("id", "average-points-header");
+  averagePointsHeaderDiv.innerHTML = "Last 7 sprints:";
+
+  const averagePointsCompletedDiv = document.createElement("div");
+  averagePointsCompletedDiv.setAttribute("id", "average-points-completed");
+  averagePointsCompletedDiv.innerHTML = `Average Points Completed: ${averagePointsCompleted()}`;
+
+  const averagePointsCommittedDiv = document.createElement("div");
+  averagePointsCommittedDiv.setAttribute("id", "average-points-committed");
+  averagePointsCommittedDiv.innerHTML = `Average Points Committed: ${averagePointsCommitted()}`;
+
+  averagePointsDiv.append(averagePointsHeaderDiv);
+  averagePointsDiv.append(averagePointsCompletedDiv);
+  averagePointsDiv.append(averagePointsCommittedDiv);
+
   // The header is currently empty on Jira, but has several segments,
   // so we're appending to the first one
   const chart_header = document.getElementById("ghx-chart-header-primary");
-  chart_header.append(average_points_div);
+  chart_header.append(averagePointsDiv);
 };
 
-const averagePoints = () => {
-  return "Test this guy";
+const averagePointsCompleted = () => {
+  const rows = document
+    .getElementById("ghx-chart-data")
+    .querySelector("tbody")
+    .querySelectorAll("tr");
+  return Math.round(
+    [...rows].reduce((sum, row) => {
+      return sum + parseInt([...row.cells].at(2).innerHTML);
+    }, 0) / rows.length
+  );
+};
+
+const averagePointsCommitted = () => {
+  const rows = document
+    .getElementById("ghx-chart-data")
+    .querySelector("tbody")
+    .querySelectorAll("tr");
+  return Math.round(
+    [...rows].reduce((sum, row) => {
+      return sum + parseInt([...row.cells].at(1).innerHTML);
+    }, 0) / rows.length
+  );
 };
 
 // Set configuration object:

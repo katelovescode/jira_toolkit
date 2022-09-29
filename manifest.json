@@ -9,10 +9,21 @@
         "https://*.atlassian.net/jira/software/c/projects/*/boards/*/reports/velocity-chart"
       ],
       "css": [
-        "reports/velocity_chart/averagepoints.css"
+        "reports/velocity_chart/averagepoints.css",
+        "shared/fonts/fonts.css"
       ],
       "js": [
         "reports/velocity_chart/averagePoints.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "shared/*"
       ]
     }
   ],
@@ -21,16 +32,16 @@
   ],
   "action": {
     "default_icon": {
-      "16": "/images/toolbox-repairing-icon.png",
-      "32": "/images/toolbox-repairing-icon.png",
-      "48": "/images/toolbox-repairing-icon.png",
-      "128": "/images/toolbox-repairing-icon.png"
+      "16": "/shared/images/toolbox-repairing-icon.png",
+      "32": "/shared/images/toolbox-repairing-icon.png",
+      "48": "/shared/images/toolbox-repairing-icon.png",
+      "128": "/shared/images/toolbox-repairing-icon.png"
     }
   },
   "icons": {
-    "16": "/images/toolbox-repairing-icon.png",
-    "32": "/images/toolbox-repairing-icon.png",
-    "48": "/images/toolbox-repairing-icon.png",
-    "128": "/images/toolbox-repairing-icon.png"
+    "16": "/shared/images/toolbox-repairing-icon.png",
+    "32": "/shared/images/toolbox-repairing-icon.png",
+    "48": "/shared/images/toolbox-repairing-icon.png",
+    "128": "/shared/images/toolbox-repairing-icon.png"
   }
 }
