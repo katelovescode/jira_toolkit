@@ -20,7 +20,7 @@
   "web_accessible_resources": [
     {
       "matches": [
-        "<all_urls>"
+        "https://*.atlassian.net/*"
       ],
       "resources": [
         "shared/*"
