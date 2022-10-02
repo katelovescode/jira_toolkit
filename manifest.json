@@ -27,9 +27,6 @@
       ]
     }
   ],
-  "permissions": [
-    "scripting"
-  ],
   "action": {
     "default_icon": {
       "16": "/shared/images/toolbox16.png",
